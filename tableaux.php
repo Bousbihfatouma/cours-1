@@ -69,8 +69,28 @@ echo"<p> le prénom du user d'index 3 est :".$users[3]['nom']."</p>";
 ?>
 <h2> Quleques méthodes</h2>
 <h3>usert</h3>
-<p> la méthode usert tire un tableau</p>
-<$php
+<p> la méthode usort tire un tableau</p>
+<?php
+$users=['Christian','Jean','Marc','Luc','Pierre'];
+//on tire le tableau par ordre alphabétique 
+usort($users, function($a,$b){
+return $a<=>$b;
+});
+
+print_r($users);
+$users=[
+  ['prenom' => "Christian", 'nom' => "Meneux", 'age' => "34"], 
+   ['prenom' => "Adème", 'nom' => "Jouneau", 'age' => "33"], 
+    ['prenom' => "Latifa", 'nom' => "chafaoui", 'age' => "31"], 
+     ['prenom' => "fatouma", 'nom' => "mali", 'age' => "35"], 
+     ['prenom' => "habibata", 'nom' => "doucouré", 'age' => "32"], 
+];
+// On trie le tableau par ordre croissant sur l'age 
+usort($users, function($a,$b){
+return $a['age'] <=>$b['age'];
+});
+var_dump($users);
+?>
 </main>
 
 </body>
