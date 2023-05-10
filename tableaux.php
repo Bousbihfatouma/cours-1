@@ -91,6 +91,17 @@ return $a['age'] <=>$b['age'];
 });
 var_dump($users);
 ?>
+<h3>array push</h3>
+<p>array push ajoute une entrée dans un tableau</p>
+<?php
+$users=["christian","Jean", "Marc","Luc","Pierre"];
+echo "le tableau avant:<br>";
+print_r($users);
+//ont ajoute une entrée dans le tableau
+array_push($users,'paul');
+echo "<br>le tableau après :<br>";
+print_r($users);
+?>
 </main>
 
 </body>
