@@ -64,8 +64,32 @@ $users = [
                     $i++;
                 }
         ?>
+
+
     </tbody>
     </table>
+    <h2>For</h2>
+    <pre class="bg-dark text-light">
+        <code>
+              &lt;?php
+              for ($i = 0; $i < 10; $i++) {
+                echo $i;
+              }
+              ?&gt; 
+        </code>
+    </pre>
+    <h2>foreach</h2>
+     <pre class="bg-dark text-light">
+        <code>
+           
+              &lt;?php
+              foreach($users as$user) {
+                echo $user ["nom"];
+                echo $user ["prenom"];
+                echo $user ["ville"];
+              }
+             ?&gt; 
+             </code>
     </main>
     </body>
     </html>
